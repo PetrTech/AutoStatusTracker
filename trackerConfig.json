@@ -1,0 +1,32 @@
+{
+    "hostIP": "0.0.0.0",
+    "hostPort": 8080,
+    "globalCheckFrequency": 60,
+    "globalTimeout": 10,
+    "targets": [
+        {
+            "displayName": "Test 1 (Category)",
+
+            "type": "category",
+            "targets": [
+                {
+                    "displayName": "Something",
+        
+                    "type": "endpoint",
+                    "endpoint": "https://example.com/",
+                    "timeout": 5,
+                    "negativeStatus": "any"
+                }
+            ]
+        },
+        {
+            "displayName": "Test 2 (Endpoint)",
+
+            "type": "endpoint",
+            "endpoint": "https://localhost:8001/",
+            "checkFrequency": 10,
+            "timeout": 5,
+            "negativeStatus": [404, 500]
+        }
+    ]
+}

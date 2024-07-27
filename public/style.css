@@ -1,0 +1,38 @@
+body {
+    background: rgb(16, 16, 26);
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    background: rgb(28, 28, 46);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.container *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.category {
+    background: rgb(42, 42, 68);
+    border-radius: 6px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.endpoint {
+    background: rgb(42, 42, 68);
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.endpointStatus {
+    background: rgb(27, 207, 90);
+
+    border-radius: 4px;
+    padding: 4px;
+}
+
