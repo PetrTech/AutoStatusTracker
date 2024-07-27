@@ -27,12 +27,39 @@ body {
     background: rgb(42, 42, 68);
     border-radius: 6px;
     padding: 12px;
+    height: calc(1rem);
+}
+
+.endpoint *{
+    font-size: 1rem;
+    float:left;
 }
 
 .endpointStatus {
-    background: rgb(27, 207, 90);
+    text-align: right;
 
-    border-radius: 4px;
-    padding: 4px;
+    float: right;
+
+    font-weight: 700;
+    background: rgb(100, 100, 100);
+
+    border-radius: 3px;
+    
+    font-size: .75rem;
+    padding: .125rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
 }
 
+.statusPositive {
+    background: rgb(27, 207, 90);
+}
+
+.statusQuestionable {
+    background: rgb(241, 203, 31);
+    color: black;
+}
+
+.statusNegative {
+    background: rgb(204, 8, 8);
+}
