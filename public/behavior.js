@@ -11,7 +11,7 @@ var statusClassNames = {
     "OFFLINE": "statusNegative"
 };
 
-// Keep only 4
+// Keep only 5
 var mainStatusNames = [
     "NOMINAL",
     "ACCEPTABLE", // If everything is ONLINE and there are one or more unexpected behaviors
