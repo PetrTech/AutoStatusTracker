@@ -3,6 +3,8 @@
     "hostPort": 8080,
     "globalCheckFrequency": 60,
     "globalTimeout": 10,
+    "failureThreshold": 2,
+    "stripDataSentToClient": true,
     "targets": [
         {
             "displayName": "Test 1 (Category)",

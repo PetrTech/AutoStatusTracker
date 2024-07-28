@@ -50,7 +50,7 @@ async function searchChild(object, configuration) {
 function isNumeric(str) {
     if (typeof str != "string") return false
     return !isNaN(str)
-  }
+}
 
 function compareData(data, endpoint){
     var positive = true

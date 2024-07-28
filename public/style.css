@@ -51,6 +51,14 @@ body {
     padding-right: .75rem;
 }
 
+.category *:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.category .endpoint{
+    border: 3px solid rgba(200,200,255,.1);
+}
+
 .statusPositive {
     background: rgb(27, 207, 90);
 }
