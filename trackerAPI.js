@@ -27,7 +27,6 @@ function stripLessData(configuration){
     if (configuration.stripDataSentToClient == true) {
         delete dataCopy.globalCheckFrequency;
         delete dataCopy.globalTimeout;
-        delete dataCopy.failureThreshold;
         
         for (var endpoint in dataCopy) {
             delete dataCopy[endpoint].timeout;

@@ -19,15 +19,18 @@ body {
 .category {
     background: rgb(42, 42, 68);
     border-radius: 6px;
+    font-weight: 700;
     padding: 12px;
     cursor: pointer;
 }
 
 .endpoint {
-    background: rgb(42, 42, 68);
+    background: rgb(50, 50, 80);
     border-radius: 6px;
     padding: 12px;
     height: calc(1rem);
+
+    border: .2rem solid rgba(200,200,255,.05);
 }
 
 .endpoint *{
@@ -55,10 +58,6 @@ body {
     margin-bottom: 8px;
 }
 
-.category .endpoint{
-    border: 3px solid rgba(200,200,255,.1);
-}
-
 .statusPositive {
     background: rgb(27, 207, 90);
 }
@@ -70,4 +69,19 @@ body {
 
 .statusNegative {
     background: rgb(204, 8, 8);
+}
+
+.centered{
+    margin-top: 10rem;
+}
+
+.centered h1, h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.centered h2{
+    font-weight: 1000;
+    font-size: 2.5rem;
 }

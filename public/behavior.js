@@ -38,13 +38,25 @@ async function searchChild(object, parent) {
             var el = document.createElement('div');
             el.classList.add("category");
 
+            var children = document.createElement('div');
+            children.style.marginLeft = "1rem";
+
             var span = document.createElement('span');
             span.innerHTML = object["displayName"];
 
             el.appendChild(span);
             parent.appendChild(el);
+            parent.appendChild(children)
 
-            await searchChild(object["targets"], el);
+            el.addEventListener("click", function() {
+                if(children.style.display == "none"){
+                    children.style.display = "block";
+                }else{
+                    children.style.display = "none";
+                }
+            });
+
+            await searchChild(object["targets"], children);
             break;
 
         // Add endpoint to check list & assign an identificator. If the check frequency/timeout is not set, set it to the default/global.
@@ -78,3 +90,19 @@ async function searchChild(object, parent) {
 
 var endpoints = JSON.parse(httpGet(window.location.origin + "/getEndpoints"));
 searchChild(endpoints.targets, document.getElementById("container"));
+
+async function updateEndpoints(){
+    var endpoints = JSON.parse(httpGet(window.location.origin + "/getStatus"));
+
+    for(var endpoint of endpoints){
+        var update = document.getElementById(endpoint["assignedId"]);
+        update.innerHTML = statusDisplayNames[endpoint["STATUS"]];
+        update.className = '';
+        update.classList.add("endpointStatus");
+        update.classList.add(statusClassNames[endpoint["STATUS"]]);
+    }
+}
+
+setInterval(async () => {
+    await updateEndpoints();
+}, 1 * 1000);
